@@ -8,8 +8,7 @@ using UnityEngine.UI;
 public class HttpManager : MonoBehaviour
 {
 
-    [SerializeField]
-    private string URL;
+    [SerializeField] private string URL;
     // Start is called before the first frame update
     [SerializeField] Text[] players;
     void Start()
