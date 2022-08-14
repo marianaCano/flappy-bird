@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.UI;
+
 
 public class HttpManager : MonoBehaviour
 {
@@ -9,6 +11,7 @@ public class HttpManager : MonoBehaviour
     [SerializeField]
     private string URL;
     // Start is called before the first frame update
+    [SerializeField] Text[] players;
     void Start()
     {
         
@@ -34,9 +37,9 @@ public class HttpManager : MonoBehaviour
             //Debug.Log(www.downloadHandler.text);
             Scores resData = JsonUtility.FromJson<Scores>(www.downloadHandler.text);
 
-            foreach (ScoreData score in resData.scores)
+            for (int i = 0; 1 < resData.scores.Length; i ++)
             {
-                Debug.Log(score.userId +" | "+score.value);
+                players[i].text = resData.scores[i].userId + " , " + resData.scores[i].name + " / " + resData.scores[i].value;
             }
         }
         else
@@ -53,6 +56,7 @@ public class ScoreData
 {
     public int userId;
     public int value;
+    public string name;
 
 }
 
