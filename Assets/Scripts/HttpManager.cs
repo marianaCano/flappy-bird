@@ -39,7 +39,7 @@ public class HttpManager : MonoBehaviour
            
             for (int i = 0; 1 < resData.scores.Length; i ++)
             {
-                players[i].text = resData.scores[i].userId + " , " + resData.scores[i].name + " / " + resData.scores[i].value;
+                players[i].text = resData.scores[i].userId + " . " + resData.scores[i].name + " / " + resData.scores[i].value;
             }
         }
         else
