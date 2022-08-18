@@ -23,9 +23,10 @@ public class HttpManager : MonoBehaviour
 
     IEnumerator GetScores()
     {
+       
         string url = URL + "/leaders";
         UnityWebRequest www = UnityWebRequest.Get(url);
-
+        Debug.Log(url);
         yield return www.SendWebRequest();
 
         if (www.isNetworkError)
@@ -35,7 +36,7 @@ public class HttpManager : MonoBehaviour
         else if(www.responseCode == 200){
             //Debug.Log(www.downloadHandler.text);
             Scores resData = JsonUtility.FromJson<Scores>(www.downloadHandler.text);
-
+           
             for (int i = 0; 1 < resData.scores.Length; i ++)
             {
                 players[i].text = resData.scores[i].userId + " , " + resData.scores[i].name + " / " + resData.scores[i].value;
