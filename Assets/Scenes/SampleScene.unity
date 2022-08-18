@@ -1672,6 +1672,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   URL: https://my-json-server.typicode.com/marianaCano/API
+  players:
+  - {fileID: 1037961926}
+  - {fileID: 1826421684}
+  - {fileID: 1481532917}
+  - {fileID: 631854694}
+  - {fileID: 378786842}
 --- !u!1 &1651017538
 GameObject:
   m_ObjectHideFlags: 0
