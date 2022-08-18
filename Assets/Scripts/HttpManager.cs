@@ -24,7 +24,7 @@ public class HttpManager : MonoBehaviour
     IEnumerator GetScores()
     {
        
-        string url = URL + "/leaders";
+        string url = URL + "/leaderboard";
         UnityWebRequest www = UnityWebRequest.Get(url);
         Debug.Log(url);
         yield return www.SendWebRequest();
