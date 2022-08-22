@@ -1643,6 +1643,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 539d206a65da9d643bc9dda6fdeac384, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  URLSignUp: https://unitywebrequest-restapi.herokuapp.com/
+  players:
+  - {fileID: 1037961926}
+  - {fileID: 1826421684}
+  - {fileID: 1481532917}
+  - {fileID: 631854694}
+  - {fileID: 378786842}
   gameOverCanvas: {fileID: 278984678}
 --- !u!4 &1521267447
 Transform:
