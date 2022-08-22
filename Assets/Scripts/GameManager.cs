@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private string URLSignUp;
+    [SerializeField] private string URL;
 
     [SerializeField] Text[] players;
 
@@ -55,7 +55,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator ActualizarScore(string postData)
     {
-        string url = URLSignUp + "/api/usuarios";
+        string url = URL + "/api/usuarios";
         UnityWebRequest www = UnityWebRequest.Put(url, postData);
         www.method = "PATCH";
         www.SetRequestHeader("Content-Type", "application/json");
@@ -82,7 +82,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator ListarUsuarios()
     {
-        string url = URLSignUp + "/api/usuarios?limit=5&sort=true";
+        string url = URL + "/api/usuarios?limit=5&sort=true";
         UnityWebRequest www = UnityWebRequest.Get(url);
         www.SetRequestHeader("x-token", token);
 

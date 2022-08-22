@@ -8,10 +8,10 @@ using UnityEngine.SceneManagement;
 
 public class HttpManager : MonoBehaviour
 {
-    [SerializeField] private string URLSignUp;
+    [SerializeField] private string URL;
 
-    [SerializeField] InputField usernameField;
-    [SerializeField] InputField passwordField;
+    [SerializeField] InputField usernameF;
+    [SerializeField] InputField passwordF;
 
     private string token;
     private string username;
@@ -42,8 +42,8 @@ public class HttpManager : MonoBehaviour
     {
         AuthData data = new AuthData();
 
-        data.username = usernameField.text;
-        data.password = passwordField.text;
+        data.username = usernameF.text;
+        data.password = passwordF.text;
 
         string postData = JsonUtility.ToJson(data);
 
@@ -52,7 +52,7 @@ public class HttpManager : MonoBehaviour
 
     IEnumerator SignUp(string postData)
     {
-        string url = URLSignUp + "/api/usuarios";
+        string url = URL + "/api/usuarios";
         UnityWebRequest www = UnityWebRequest.Put(url, postData);
         www.method = "POST";
         www.SetRequestHeader("Content-Type", "application/json");
@@ -80,7 +80,7 @@ public class HttpManager : MonoBehaviour
 
     IEnumerator LogIn(string postData)
     {
-        string url = URLSignUp + "/api/auth/login";
+        string url = URL + "/api/auth/login";
         UnityWebRequest www = UnityWebRequest.Put(url, postData);
         www.method = "POST";
         www.SetRequestHeader("content-type", "application/json");
@@ -110,7 +110,7 @@ public class HttpManager : MonoBehaviour
 
     IEnumerator GetPerfil()
     {
-        string url = URLSignUp + "/api/usuarios/" + username;
+        string url = URL + "/api/usuarios/" + username;
         UnityWebRequest www = UnityWebRequest.Get(url);
         www.SetRequestHeader("x-token", token);
 
