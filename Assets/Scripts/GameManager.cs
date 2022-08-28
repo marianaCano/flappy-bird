@@ -55,6 +55,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator ActualizarScore(string postData)
     {
+        
         string url = URL + "/api/usuarios";
         UnityWebRequest www = UnityWebRequest.Put(url, postData);
         www.method = "PATCH";
