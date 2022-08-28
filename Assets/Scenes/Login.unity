@@ -231,9 +231,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e968c4b65d0088c44ae8df8de507ed5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  URL: https://unitywebrequest-restapi.herokuapp.com/
-  usernameF: {fileID: 0}
-  passwordF: {fileID: 0}
+  URL: https://unitywebrequest-restapi.herokuapp.com
+  usernameF: {fileID: 6047942499329489647}
+  passwordF: {fileID: 6047942499359770380}
 --- !u!4 &526665580
 Transform:
   m_ObjectHideFlags: 0
